@@ -3,17 +3,19 @@ import sys
 import time
 import easyocr
 import keyboard
+import pyperclip
 import numpy as np
 from PIL import ImageGrab
-import pyperclip
 
 ZH_PATTERN = r'[\u4e00-\u9fa5]+'
 
 # reader = easyocr.Reader(['ch_sim'])
 reader = easyocr.Reader(['ch_sim', 'en'])
 
+
 def ocr(img: np.ndarray) -> str:
     return reader.readtext(img)
+
 
 def f1() -> None:
     print('[Meta Shift S]')
@@ -37,6 +39,7 @@ def f1() -> None:
     pyperclip.copy(s)
     print("copied.")
     print()
+
 
 if __name__ == '__main__':
     print('start')
