@@ -2,7 +2,7 @@
 
 2025 爱莉希雅 生贺
 
-## Env
+## OCR Env
 
 CPU:
 
@@ -19,7 +19,7 @@ GPU:
 conda create -y -n ely python=3.11
 conda activate ely
 conda install pytorch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 numpy pillow==9.4.0 easyocr ninja opencv pytorch-cuda=12.1 -c pytorch -c nvidia
-conda install keyboard -c conda-forge
+conda install keyboard pyperclip -c conda-forge
 pip install opencv-contrib-python==4.11.0.86 --dry-run
 pip install opencv-contrib-python==4.11.0.86
 ```
