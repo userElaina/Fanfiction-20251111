@@ -5,6 +5,7 @@ import easyocr
 import keyboard
 import numpy as np
 from PIL import ImageGrab
+import pyperclip
 
 ZH_PATTERN = r'[\u4e00-\u9fa5]+'
 
@@ -30,7 +31,11 @@ def f1() -> None:
         # matches = re.findall(ZH_PATTERN, s)
         # l += matches
         l += s
-    print('ocr: %s' % ''.join(l))
+    s = ''.join(l)
+    print('ocr: %s' % s)
+
+    pyperclip.copy(s)
+    print("copied.")
     print()
 
 if __name__ == '__main__':
