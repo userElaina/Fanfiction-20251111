@@ -34,4 +34,7 @@ conda activate cnocr313
 pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 numpy==2.2.6 pillow --index-url https://download.pytorch.org/whl/cu128 --dry-run
 pip install cnocr[ort-gpu] --dry-run
 conda install keyboard pyperclip -c conda-forge
+
+# https://huggingface.co/breezedeus/cnstd-cnocr-models/resolve/main/models/cnocr/2.3/scene-densenet_lite_136-gru-onnx.zip?download=true
+# extract to ~/AppData/Roaming/cnocr/2.3/
 ```
