@@ -7,7 +7,8 @@ import numpy as np
 from PIL import ImageGrab
 from cnocr import CnOcr
 
-ocrs = CnOcr(det_model_name='naive_det')
+# ocrs = CnOcr(det_model_name='naive_det')
+ocrs = CnOcr(det_model_name='cnocr-v2.3-doc-densenet_lite_136-gru-epoch=004-ft-model')
 
 
 def ocr(img: np.ndarray) -> str:
@@ -40,7 +41,7 @@ def f1() -> None:
 if __name__ == '__main__':
     print('start')
     while True:
-        if keyboard.is_pressed('ctrl+c'):
+        if keyboard.is_pressed('ctrl+d'):
             sys.exit(0)
         if keyboard.is_pressed('windows+shift+s'):
             f1()
