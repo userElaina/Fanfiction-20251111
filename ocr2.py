@@ -8,7 +8,9 @@ from PIL import ImageGrab
 from cnocr import CnOcr
 
 # ocrs = CnOcr(det_model_name='naive_det')
-ocrs = CnOcr(det_model_name='cnocr-v2.3-doc-densenet_lite_136-gru-epoch=004-ft-model')
+ocrs = CnOcr(
+    det_model_name='cnocr-v2.3-doc-densenet_lite_136-gru-epoch=004-ft-model'
+)
 
 
 def ocr(img: np.ndarray) -> str:
